@@ -556,13 +556,7 @@ int main() {
 | 理論複雜度 | O(h) 約= O(3)|
 
 ## 編譯與執行指令
-
-(a)計算height/log2(n)
-```shell
-
-```
-
-(b)計算刪除節點的複雜度
+輸出的內容上半部為(a)，下半為(b)
 ```shell
 $ g++ -std=c++17 -o main.exe
 $ .\main.exe
