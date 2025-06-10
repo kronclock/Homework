@@ -24,15 +24,10 @@ S = 2000
 需畫出輸入總時間t_input 對 k 的粗略圖，並判斷：是否總存在某個 k 值，使得 t_CPU ≈ t_input
 ## 解題策略
 1. 建立初始資料:	使用 generateRuns() 將資料分為 K 個 sorted run，模擬外部排序的預處理階段。
-   
 2️. 設計 buffer:	分配 K 個輸入緩衝區 + 1 輸出 + 2 預備緩衝區，模擬實際記憶體分配。
-
 3️. 模擬 I/O:	對每次磁碟讀寫呼叫 simulateDiskRead/Write() 模擬 seek, latency, 傳輸。
-
 4️. 執行合併: 使用 priority queue 完成 k-way merge，每次將最小的 key 輸出。
-
 5️. 實驗與效能: 執行多組 n 以觀察真實程式執行時間與模擬的 I/O 時間差異。
-
 6️. 分析不同 k 對效能的影響: 輸出成CSV檔。
 
 ## 程式實作
