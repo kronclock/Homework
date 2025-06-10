@@ -3,11 +3,11 @@
 template <class T>
 class MinPQ {
 public:
-    virtual ~MinPQ() {}                           // µêÀÀ¸Ñºc¤l
-    virtual bool IsEmpty() const = 0;             // ¦^¶Ç¦î¦C¬O§_¬°ªÅ
-    virtual const T& Top() const = 0;             // ¦^¶Ç³Ì¤p­Èªº°Ñ¦Ò
-    virtual void Push(const T& x) = 0;            // ±N¤¸¯À¥[¤J¦î¦C
-    virtual void Pop() = 0;                       // ²¾°£³Ì¤p­È¤¸¯À
+    virtual ~MinPQ() {}                           // è™›æ“¬è§£æ§‹å­
+    virtual bool IsEmpty() const = 0;             // å›å‚³ä½‡åˆ—æ˜¯å¦ç‚ºç©º
+    virtual const T& Top() const = 0;             // å›å‚³æœ€å°å€¼çš„åƒè€ƒ
+    virtual void Push(const T& x) = 0;            // å°‡å…ƒç´ åŠ å…¥ä½‡åˆ—
+    virtual void Pop() = 0;                       // ç§»é™¤æœ€å°å€¼å…ƒç´ 
 };
 // MinHeap.h
 #include <vector>
@@ -16,7 +16,7 @@ public:
 template <class T>
 class MinHeap : public MinPQ<T> {
 private:
-    std::vector<T> heap;  // ¨Ï¥Î vector Àx¦s heap
+    std::vector<T> heap;  // ä½¿ç”¨ vector å„²å­˜ heap
 
     void HeapifyUp(int index) {
         while (index > 0) {
